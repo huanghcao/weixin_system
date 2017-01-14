@@ -1,0 +1,53 @@
+/* pages/lookMe/lookMe.wxss */
+.img1{
+    width: 90rpx;
+    height: 90rpx;
+}
+.img2{
+    width: 70rpx;
+    height: 70rpx;
+}
+.img3{
+    width: 27rpx;
+    height: 27rpx;
+}
+.wrap{
+    padding: 40rpx 0;
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-bottom: 1px solid #e5e5e5;
+}
+.lookMe_wrap > view:nth-child(2n-1){
+    background-color: #f9f9f9;
+}
+.wrap .left{
+    width: 90rpx;
+    height: 90rpx;
+    min-width: 90rpx;
+    border-radius: 90rpx;
+    overflow: hidden;
+}
+.wrap .middle{
+    max-width: 60%;
+}
+.wrap .middle .top{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 150%;
+}
+
+.wrap .middle .bottom{
+    font-size: 10pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap .right{
+    text-align: center;
+    font-size: 10pt;
+}

@@ -1,0 +1,17 @@
+<!--pages/massageContant/massageContant.wxml-->
+<view class="massageContant_wrap">
+    <view class="title">{{title}}</view>
+    <view class="detail">
+        <view class="left">
+            <image class="img1" src="image/_02.png"></image>
+            <text>{{companyname}}</text>
+        </view>
+        <view>
+            <image class="img1" src="image/_01.png"></image>
+            <text>{{time}}</text>
+        </view>
+    </view>
+    <view class="contant">
+        {{contant}}
+    </view>
+</view>

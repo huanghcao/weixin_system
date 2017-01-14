@@ -1,0 +1,28 @@
+/* pages/bindemail/bindemail.wxss */
+.bindemail_wrap{
+    color: #888888;
+}
+.naw_email{
+    margin: 30rpx auto;
+    width: 94%;
+}
+.new_email{
+    border: 1px solid #e5e5e5;
+    border-radius: 6rpx;
+    width: 94%;
+    margin: 0 auto;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+}
+.new_email input{
+    width: 94%;
+}
+.save_btn{
+    color: #fff;
+    width: 94%;
+    margin-top: 30rpx;
+    background-color: #e58026;
+    height: 90rpx;
+    line-height: 90rpx;
+}

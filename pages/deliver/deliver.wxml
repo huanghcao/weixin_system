@@ -1,0 +1,82 @@
+<!--pages/deliver/deliver.wxml-->
+<loading hidden="{{!showloding}}">加载中...</loading>
+<view class="deliver-wrap">
+     <nav class="deliver-nav">
+        <ul>
+            <li class="{{current == 0 ? 'avtivity' :''}}" catchtap="switchSlider" data-index="0">投递成功</li>
+            <li class="{{current == 1 ? 'avtivity' :''}}" catchtap="switchSlider" data-index="1">公司已查看</li>
+            <li class="{{current == 2 ? 'avtivity' :''}}" catchtap="switchSlider" data-index="2">面试邀请</li>
+            <li class="{{current == 3 ? 'avtivity' :''}} last" catchtap="switchSlider" data-index="3">暂不合适</li>
+        </ul>
+    </nav>
+    <swiper class="main-list" current="{{current}}" bindchange="changeSlider" duration="500">
+        <block>
+            <!--投递成功-->
+            <swiper-item >
+                <view class="deliver_list" wx:for="{{deliver_success}}">
+                    <view class="left">
+                        <view class="name">{{item.name}}</view>
+                        <view class="hotal_name">{{item.hotel_name}}</view>
+                        <view class="time">{{item.time}}投递</view>
+                    </view>
+                    <view class="right">
+                        <view class="clock">
+                            <image mode="aspectFill" src="image/clock_01.png"></image>
+                            <text>提醒HR</text>
+                        </view>
+                    </view>
+                </view>
+            </swiper-item>
+            <!--公司已查看-->
+            <swiper-item >
+                <!--<image hidden="false" src="image/jieshu.png"></image>-->
+                <view class="have_look_list" wx:for="{{have_look}}">
+                    <view class="person_name">
+                        <image wx:if="{{!item.has_ended}}" src="image/jieshu.png"></image>
+                        {{item.name}}
+                    </view>
+                    <view class="company_name">{{item.hotel_name}}</view>
+                    <view class="bottom">
+                        <view>{{item.action}}</view>
+                        <view>{{item.time}}查看</view>
+                    </view>
+                </view>
+            </swiper-item>
+            <!--面试邀请-->
+            <swiper-item class="swiper-item_3">
+                <view class="interview" wx:for="{{interview}}">
+                    <view class="person_name">
+                        <image wx:if="{{!item.has_ended}}" src="image/jieshu.png"></image>
+                        {{item.name}}
+                    </view>
+                    <view class="company_name">{{item.hotel_name}}</view>
+                    <view class="bottom">
+                        <view>{{item.action}}</view>
+                        <view>{{item.time}}邀请</view>
+                    </view>
+                    <view bindtap="examine" class="examine">
+                        查看详情
+                    </view>
+                </view>
+            </swiper-item>
+            <!--暂不合适-->
+            <swiper-item class="swiper-item_3">
+                <view class="inappropriate" wx:for="{{inappropriate}}">
+                    <view class="person_name">
+                        <image wx:if="{{!item.has_ended}}" src="image/jieshu.png"></image>
+                        {{item.name}}
+                    </view>
+                    <view class="company_name">{{item.hotel_name}}</view>
+                    <view class="bottom">
+                        <view>{{item.action}}</view>
+                        <view>{{item.time}}回复</view>
+                    </view>
+                    <view bindtap="examine" class="examine">
+                        查看详情
+                    </view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+</view>

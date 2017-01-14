@@ -1,0 +1,35 @@
+<!--pages/register/register.wxml-->
+<wrap class="register_wrap">
+    <view class="register_phoneNum">
+        手机号:<input placeholder-class="placeholder" placeholder="请输入手机号"/>
+    </view>
+    <view class="register_code">
+        <view class="left">
+            验证码:<input placeholder-class="placeholder" placeholder="请输入验证码"/>
+        </view>
+        <view class="right">
+            <image class="img2" src=""></image>
+            <image class="img1" src="image/shuaxin.png"></image>
+        </view>
+    </view>
+    <view class="register_massage">
+        <view class="left">
+            短息码:<input placeholder-class="placeholder" placeholder="请输入短息验证码"/>
+        </view>
+        <view class="right">
+            获取验证码
+        </view>
+    </view>
+    <view class="register_password">
+        密   码:<input type="{{ hidden_password === true ? 'password':'text'}}" placeholder-class="placeholder"  placeholder="密码(6-20个字母或数字)"/>
+    </view>
+    <view class="register_labal">
+        <checkbox-group bindchange="checkboxChange">
+            <label>
+                <checkbox value="true"/>显示密码
+            </label>
+        </checkbox-group>
+    </view>
+    <!--注册-->
+    <button class="register" loading="true" >注册</button>
+</wrap>

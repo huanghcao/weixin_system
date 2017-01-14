@@ -1,0 +1,12 @@
+<!--pages/bindemail/bindemail.wxml-->
+<view class="bindemail_wrap">
+    <form bindsubmit="formSubmit">
+        <view class="naw_email">
+            现有邮箱:{{email}}
+        </view>
+        <view class="new_email">
+            <input name="email" placeholder="邮箱地址" />
+        </view>
+        <button formType="submit" class="save_btn">绑定</button>
+    </form>
+</view>

@@ -1,0 +1,38 @@
+/* pages/systemMassage/systemMassage.wxss */
+.img1{
+    width: 40rpx;
+    height: 40rpx;
+}
+.wrap{
+    width: 94%;
+    padding: 10rpx 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    border-bottom: 1px solid #e5e5e5;
+}
+.wrap .left{
+
+}
+.wrap .right{
+    width: 90%;
+}
+.wrap .right .top{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.right .bottom{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12pt;
+    color: #999999;
+    line-height: 200%;
+}
+.bottom .name{
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
